@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <main>
+      <section class="cover">
+        <div class="headers">
+          <div class="date">
+            <div class="date__hour">01:10 AM</div>
+            <div class="date__today">Martes, 10 Mayo, 2022</div>
+          </div>  
+          <div class="location">
+            <div class="city" id="city">Buenos Aires</div>
+            <div class="country" id="country">Argentina</div>
+          </div>
+        </div>
+        <form class="search">
+            <input type="text" id="input-city" placeholder="City ">
+            <input id="btn-search" class="btn_submit" type="submit" value="">
+        </form>
+      </section>
+      <section class="weather">
+        <div class="weather__icon">
+          <img
+            id="weather-icon"
+            src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/000000/external-cloud-weather-forecast-microdots-premium-microdot-graphic-4.png"
+          />
+          <div id="weather-description">Mostly Sunny</div>
+        </div>
+        <div class="weather__temperature" id="weather-temperature">
+          <div class="temperature__item">42°</div>
+          <div class="temperature__max-min">25°- 45°</div>
+        </div>
+        <div class="weather__plus">
+          <div class="plus__item">
+            <img src="src/icons/humidity.png" alt="" />
+            <div class="plus-item__name">Humidity (%)</div>
+            <div id="data-humidity" class="plus-item__data">20.3</div>
+          </div>
+          <div class="plus__item">
+            <img src="src/icons/atmospheric-pressure.png" alt="" />
+            <div class="plus-item__name">Pressure (hPa)</div>
+            <div id="data-pressure" class="plus-item__data">20.3</div>
+          </div>
+          <div class="plus__item">
+            <img src="src/icons/wind.png" alt="" />
+            <div class="plus-item__name">Wind (km/h)</div>
+            <div id="data-wind" class="plus-item__data">20.3</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./src/background.js"   ></script>
+    <script src="./src/api.js" ></script>
+    <script src="./src/addWeather.js" ></script>
+    <script src="./index.js"  ></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+:root {
+  --fontColor1: rgba(0, 0, 0, 0.6);
+  --fontColor2: rgba(41, 39, 39, 0.8);
+  --text-size-regular: 3rem;
+  --text-size-long: 5rem;
+  --text-size-regular-mobile: 1.5rem;
+  --text-size-long-mobile: 2.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+.cover {
+  width: 100vw;
+  height: 70vh;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)),
+    url(https://images.unsplash.com/photo-1644611125698-5ee08fdef0f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NjE2MDU3Mw&ixlib=rb-1.2.1&q=80&w=1080);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.headers {
+  width: 100%;
+  height: 30vh;
+  padding-top: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.date {
+  padding-left: 3rem;
+}
+
+.date .date__hour {
+  font-size: var(--text-size-long);
+  color: var(--fontColor1);
+}
+
+.date .date__today {
+  font-size: 2rem;
+  color: var(--fontColor1);
+}
+
+.location {
+  padding-right: 3rem;
+  text-align: end;
+}
+
+.location .city {
+  font-size: var(--text-size-long);
+  color: var(--fontColor1);
+}
+
+.location .country {
+  font-size: 2rem;
+  color: var(--fontColor1);
+}
+
+.search {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4.5rem;
+  width: 40vw;
+  padding-left: 1rem;
+  min-width: 220px;
+  border: 3px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.479);
+  overflow: hidden;
+}
+
+.search:hover {
+  box-shadow: 0 0 2px 1px gray;
+}
+
+.search input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  color: var(--fontColor2);
+}
+
+.search .btn_submit {
+  height: 100%;
+  width: 50px;
+  border: none;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  background-image: url("./src/icons/search.png");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.weather {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather__icon {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.weather__icon img {
+  height: 100px;
+}
+
+.temperature__item {
+  font-size: 7rem;
+  color: var(--fontColor2);
+  text-align: center;
+}
+
+.temperature__max-min {
+  font-size: var(--text-size-regular);
+  color: var(--fontColor1);
+}
+
+.weather__plus {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plus__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather__plus img {
+  height: 5rem;
+}
+
+.plus-item__name {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.plus-item__data {
+  font-size: 2.5rem;
+
+}
+
+@media (max-width: 480px) {
+  .location .city {
+    font-size: var(--text-size-long-mobile);
+  }
+
+  .location .country {
+    font-size: var(--text-size-regular-mobile);
+  }
+
+  .date .date__hour {
+    font-size: var(--text-size-long-mobile);
+  }
+
+  .date .date__today {
+    font-size: var(--text-size-regular-mobile);
+  }
+
+  .weather__icon {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .temperature__item {
+    font-size: 4rem;
+  }
+
+  .temperature__max-min {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+  }
+
+  .weather__plus img {
+    height: 3rem;
+  }
+
+  .plus-item__name {
+    font-size: var(--text-size-regular-mobile);
+  }
+
+  .plus-item__data {
+    font-size: var(--text-size-regular-mobile);
+  }
+}
+
+@media (max-width: 1024px) {
+  .cover {
+    height: 60vh;
+  }
+
+  .weather {
+    height: 40vh;
+  }
+
+  .weather {
+    overflow-wrap: normal;
+    flex-wrap: wrap;
+  }
+
+  .weather__plus {
+    width: 100vw;
+    justify-content: space-around;
+    margin: 0 1rem;
+  }
+}
